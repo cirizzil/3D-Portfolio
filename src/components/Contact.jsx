@@ -29,15 +29,10 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Replace these placeholders with your actual values if not using .env
-    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
-
     emailjs
       .send(
-        serviceId,
-        templateId,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Ciril",
@@ -45,7 +40,7 @@ const Contact = () => {
           to_email: "cirilbijujoseph@gmail.com",
           message: form.message,
         },
-        publicKey
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -61,6 +56,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
+
           alert("Ahh, something went wrong. Please try again.");
         }
       );

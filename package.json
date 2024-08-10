@@ -15,6 +15,7 @@
     "@react-three/drei": "^9.106.0",
     "@react-three/fiber": "^8.16.8",
     "@react-three/postprocessing": "^2.16.2",
+    "@vercel/speed-insights": "^1.0.12",
     "framer-motion": "^11.2.10",
     "maath": "^0.10.7",
     "postprocessing": "^6.36.0",

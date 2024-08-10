@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
